@@ -5,8 +5,257 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BoardList.html</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.1/font/bootstrap-icons.css">
+    <style>
+        span.sideMenu {
+          display: inline-block;
+          width: 100%;
+          height: 90px;
+          background-color: #105652;
+          color: white;
+          text-align: center;
+          line-height: 90px;
+          font-size: 1.3em;
+          font-weight: 200;
+        }
+        </style>
 </head>
 <body>
-    
+    <div class="container">
+        <nav class="navbar navbar-expand-sm bg-dark navbar-dark sticky-top">
+
+            <div class="container-fluid">
+              <!-- Links -->
+              <ul class="navbar-nav">
+                <a class="navbar-brand" href="#"><img src="https://www.ikosmo.co.kr/images/common/logo_center_v2.jpg" 
+                    width="100"></a>
+                    
+                <li class="nav-item">
+                  <a class="nav-link active" href="#">홈으로</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">회원제게시판</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">자료실</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" 
+                        data-bs-toggle="dropdown">임시Menu</a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#">Link</a></li>
+                      <li><a class="dropdown-item" href="#">Another link</a></li>
+                      <li><a class="dropdown-item" href="#">A third link</a></li>
+                    </ul>
+                  </li>
+                  <li class="nav-item">
+                    <div class="input-group">
+                        <input class="form-control ms-2 border-2" type="text" placeholder="검색">
+                        <span class="input-group-btn">
+                            <button class="btn btn-light btn-outline-secondary border-2" type="button">
+                                <i class="bi bi-search"></i>
+                            </button>
+                        </span>
+                    </div>
+                </li>
+                </ul>
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <i class="bi bi-person-circle"></i>
+                            회원가입</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <i class="bi bi-box-arrow-in-right"></i>
+                            로그인</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <div class="row m-1 mt-3">
+            <div class="col-sm-3 d-grid">
+                <span class="sideMenu rounded-3">현재메뉴명</span>
+
+            </div>
+            <div class="col-sm-9 d-grid">
+                <span style="font-size: 1.3em;">게시판 -</span>
+                이런저런 기능이 있는 게시판입니다.
+                
+                <br>
+                <div class="d-flex">
+                    <div class="p-1 ms-auto">
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-outline-secondary dropdown-toggle border-2" 
+                            data-bs-toggle="dropdown">제목 </button>
+                            <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#">Tablet</a>
+                            <a class="dropdown-item" href="#">Smartphone</a>
+                            <hr class="dropdown-divider"></hr>
+                            <a class="dropdown-item" href="#">카메라</a>
+                            <a class="dropdown-item" href="#">워크맨</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-1">
+                        <div class="input-group">
+                            <input class="form-control border-2" type="text">
+                            <span class="input-group-btn">
+                                <button class="btn btn-light me-3 btn-outline-secondary border-2" type="button">
+                                    <i class="bi bi-search"></i>
+                                </button>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="row m-1">
+            <div class="col-sm-3 d-grid">
+                <div class="list-group list-group-flush">
+                    <a href="#" class="list-group-item list-group-item-action">회원제게시판</a>
+                    <a href="#" class="list-group-item list-group-item-action list-group-item-light">자료실</a>
+                    <a href="#" class="list-group-item list-group-item-action dropdown-toggle">
+                        임시Menu
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#">노트북</a>
+                            <a class="dropdown-item" href="#">DSLR카메라</a>
+                        </div>
+                    </a>
+                  </div>
+                <!-- <div class="btn-group-vertical">
+                    <button type="button" class="btn">회원제게시판</button>
+                    <button type="button" class="btn">자료실</button>
+                    <button type="button" class="btn dropdown-toggle" data-bs-toggle="dropdown">임시Menu</button>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">노트북</a>
+                        <a class="dropdown-item" href="#">DSLR카메라</a>
+                    </div>
+                </div> -->
+            </div>
+
+
+            <div class="col-sm-9 ">
+                <table class="table table-bordered table-striped table-hover text-center">
+                    <thead class="table text-center" style="background-color: #DFD8CA;"> 
+                        <tr>
+                            <th>번호</th>
+                            <th style="text-align: left; width: 50%;">제목</th>
+                            <th>작성자</th>
+                            <th>작성일</th>
+                            <th>조회수</th>
+                            <th>첨부</th>
+                        </tr>
+                    </thead>
+                    <!-- tbody>tr>td*4 -->
+                    <tbody>
+                        <tr>
+                            <td>10</td>
+                            <td style="text-align: left;">제목입니다</td>
+                            <td>채은</td>
+                            <td>2021-11-24</td>
+                            <td>99</td>
+                            <td>
+                                <i class="bi bi-file-earmark-arrow-down"></i>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>10</td>
+                            <td style="text-align: left;">제목입니다</td>
+                            <td>채은</td>
+                            <td>2021-11-24</td>
+                            <td>99</td>
+                            <td>
+                                <i class="bi bi-file-earmark-arrow-down"></i>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>10</td>
+                            <td style="text-align: left;">제목입니다</td>
+                            <td>채은</td>
+                            <td>2021-11-24</td>
+                            <td>99</td>
+                            <td>
+                                <i class="bi bi-file-earmark-arrow-down"></i>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>10</td>
+                            <td style="text-align: left;">제목입니다</td>
+                            <td>채은</td>
+                            <td>2021-11-24</td>
+                            <td>99</td>
+                            <td>
+                                <i class="bi bi-file-earmark-arrow-down"></i>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>10</td>
+                            <td style="text-align: left;">제목입니다</td>
+                            <td>채은</td>
+                            <td>2021-11-24</td>
+                            <td>99</td>
+                            <td>
+                                <i class="bi bi-file-earmark-arrow-down"></i>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>10</td>
+                            <td style="text-align: left;">제목입니다</td>
+                            <td>채은</td>
+                            <td>2021-11-24</td>
+                            <td>99</td>
+                            <td>
+                                <i class="bi bi-file-earmark-arrow-down"></i>
+                            </td>
+                        </tr>
+                        
+                    </tbody>
+                    </table>
+
+                    <div class="d-flex ms-auto">
+                        <div class="ms-auto">
+                            <button type="button" class="btn btn-sm btn-light">Reset</button>
+                            <button type="button" class="btn btn-sm btn-outline-secondary">글쓰기</button>
+                            <button type="button" class="btn btn-sm btn-primary">수정하기</button>
+                            <button type="button" class="btn btn-sm btn-success">삭제하기</button>
+                            <button type="button" class="btn btn-sm btn-info">답글쓰기</button>
+                            <button type="button" class="btn btn-sm btn-warning">리스트보기</button>
+                            <button type="button" class="btn btn-sm btn-danger">전송하기</button>
+                        </div>
+                    </div>
+
+                    <ul class="pagination justify-content-center mt-5">
+                        <li class="page-item"><a class="page-link" href="#">
+                            <i class="bi bi-arrow-left-circle"></i>
+                        </a></li>
+                        <li class="page-item"><a class="page-link" href="#">
+                            <i class="bi bi-skip-backward-fill"></i>
+                        </a></li>
+                        <li class="page-item"><a class="page-link" href="#">1</a></li>
+                        <li class="page-item active"><a class="page-link" href="#">2</a></li>
+                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                        <li class="page-item"><a class="page-link" href="#">4</a></li>
+                        <li class="page-item"><a class="page-link" href="#">5</a></li>
+                        <li class="page-item"><a class="page-link" href="#">
+                            <i class="bi bi-skip-forward-fill"></i>
+                        </a></li>
+                        <li class="page-item"><a class="page-link" href="#">
+                            <i class="bi bi-arrow-right-circle"></i>
+                        </a></li>
+                    </ul>
+                
+                    <div class="text-center fixed-bottom mb-3">
+                        Email: tjcos3@naver.com  Mobile: 010-4815-4672  Address: 경기도 안양시 동안구
+                        <br>
+                        copyright ⓒ 2021 한국소프트웨어인재개발원.All right reserved.
+                    </div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
